@@ -1,0 +1,17 @@
+{% extends 'products/base.html' %}
+{% load static %}
+{% block mycontent %}
+
+<div style="background-color:rgba(172, 197, 158, 0.985)">
+<h1> This my world page </h1>
+</div>
+<div style="background-color:rgba(144, 184, 118, 0.985)">
+    <h1> WE are welcomed</h1> 
+</div>
+ 
+{% endblock %}
+
+{%  block mainblock %}
+
+ <img src="{% static 'products/images/p1.png' %}" width="500" height="500">
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'products/base.html' %}
+{% block title %}All customers {% endblock %}
+{% block mycontent %}
+<h1>All Customers</h1>
+
+<div align="center">
+    <div class="card" style="width: 18rem; display: inline-block;">
+        <img src="{{customer.get_image_url}}" 
+           width="400" height="400"
+           class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Customer Name:{{customer.name}}</h5>
+            <p class="card-title">Customer Age:{{customer.age}}</h5>
+            <p class="card-title">Customer Created _At:{{customer.created_at}}</h5>
+            <p class="card-title">Customer Updated_At:{{customer.updated_at}}</h5>
+             
+            </div>
+            <a class="btn btr-danger" href="{{customer.get_delete}}" >Delete Customers</a>
+
+        </div>
+           
+    </div>
+   
+   
+   {% endblock %}

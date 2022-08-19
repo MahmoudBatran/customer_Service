@@ -1,0 +1,24 @@
+{% extends 'products/base.html' %}
+{% block title %}All customers {% endblock %}
+{% block mycontent %}
+<h1>All Customers</h1>
+
+<div align="center">
+    {% for customer in customers %}
+    <div class="card" style="width: 18rem; display: inline-block;">
+        <img src="{{customer.get_image_url}}" 
+           width="400" height="400"
+           class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Customer Name:{{customer.name}}</h5>
+           
+            
+             <a href="{{customer.get_customer_url}}" class="btn btn-success">Customer Details</a>
+            </div>
+        </div>
+           
+      {% endfor %}
+    </div>
+   
+   
+   {% endblock %}
